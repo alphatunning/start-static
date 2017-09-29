@@ -11,7 +11,6 @@ var gulp = require('gulp');
     autoprefixer = require('gulp-autoprefixer');
     sass = require('gulp-sass');
     sourcemaps = require('gulp-sourcemaps');
- 	notify = require('gulp-notify');
  	cache = require('gulp-cache');
 	rename = require('gulp-rename');
 	minifycss = require('gulp-minify-css'),
