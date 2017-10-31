@@ -1,0 +1,19 @@
+/*!
+ * Start Bootstrap - Round About (http://startbootstrap.com/template-overviews/round-about)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-round-about/blob/master/LICENSE)
+ */
+body {
+  padding-top: 54px;
+  color: red; }
+
+.map {
+  width: 50px;
+  height: 50px;
+  background: red; }
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px; } }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3R5bGUtb25lLmNzcyIsInNvdXJjZXMiOlsic3R5bGUtb25lLnNjc3MiXSwic291cmNlc0NvbnRlbnQiOlsiLyohXHJcbiAqIFN0YXJ0IEJvb3RzdHJhcCAtIFJvdW5kIEFib3V0IChodHRwOi8vc3RhcnRib290c3RyYXAuY29tL3RlbXBsYXRlLW92ZXJ2aWV3cy9yb3VuZC1hYm91dClcclxuICogQ29weXJpZ2h0IDIwMTMtMjAxNyBTdGFydCBCb290c3RyYXBcclxuICogTGljZW5zZWQgdW5kZXIgTUlUIChodHRwczovL2dpdGh1Yi5jb20vQmxhY2tyb2NrRGlnaXRhbC9zdGFydGJvb3RzdHJhcC1yb3VuZC1hYm91dC9ibG9iL21hc3Rlci9MSUNFTlNFKVxyXG4gKi9cclxuXHJcbmJvZHkge1xyXG4gIHBhZGRpbmctdG9wOiA1NHB4O1xyXG4gIGNvbG9yOnJlZDtcclxufVxyXG5cclxuLm1hcCB7XHJcblx0d2lkdGg6IDUwcHg7XHJcblx0aGVpZ2h0OiA1MHB4O1xyXG5cdGJhY2tncm91bmQ6IHJlZDtcclxufVxyXG5cclxuQG1lZGlhIChtaW4td2lkdGg6IDk5MnB4KSB7XHJcbiAgYm9keSB7XHJcbiAgICBwYWRkaW5nLXRvcDogNTZweDtcclxuICB9XHJcbn0iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7R0FJRztBQUVILEFBQUEsSUFBSSxDQUFDO0VBQ0gsV0FBVyxFQUFFLElBQUk7RUFDakIsS0FBSyxFQUFDLEdBQUcsR0FDVjs7QUFFRCxBQUFBLElBQUksQ0FBQztFQUNKLEtBQUssRUFBRSxJQUFJO0VBQ1gsTUFBTSxFQUFFLElBQUk7RUFDWixVQUFVLEVBQUUsR0FBRyxHQUNmOztBQUVELE1BQU0sRUFBRSxTQUFTLEVBQUUsS0FBSztFQUN0QixBQUFBLElBQUksQ0FBQztJQUNILFdBQVcsRUFBRSxJQUFJLEdBQ2xCIn0= */
