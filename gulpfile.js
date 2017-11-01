@@ -15,7 +15,7 @@ var gulp = require('gulp');
 	rename = require('gulp-rename');
 	minifycss = require('gulp-minify-css'),
 	minifyhtml= require('gulp-minify-html'); 
-	useref = require('gulp-useref');
+	usemin = require('gulp-usemin');
 
 // Development Tasks 
 // -----------------
@@ -33,6 +33,7 @@ gulp.task('sass', function() {
 	return gulp.src('src/scss/**/*.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass().on('error', sass.logError))
+	.pipe(autoprefixer('last 2 version'))
 	.pipe(sourcemaps.write())
 	.pipe(gulp.dest('src/css'))
 	.pipe(browserSync.reload({
@@ -41,18 +42,32 @@ gulp.task('sass', function() {
 	})
 
 gulp.task('server', function() {
-	return browserSync.init({
+	browserSync.init({
 		server: {
 			baseDir: 'src'
 		}
 		});
 	});
 
+//Quality codes
+gulp.task('scss-lint', function() {
+	return gulp.src('/scss/*.scss')
+	.pipe(scsslint())
+	.pipe(gulp.dest('dist/css') );
+	});
+
+gulp.task('hint-js', function (event) {
+	return gulp.src('src/js/**/*.js')
+	.pipe(jshint())
+	.pipe(jshint.reporter(jshintStylish));
+	});
+
+
 // Optimization Tasks 
 // ------------------
 
 gulp.task('build', ['clean'],function() {
-	gulp.start('sass','useref','images','fonts');
+	gulp.start('usemin','images','fonts');
 	});
 
 
@@ -62,12 +77,14 @@ gulp.task('clean', function() {
 	});
 
 // Optimizing CSS and JavaScript 
-gulp.task('useref', function() {
+gulp.task('usemin', ['sass'], function() {
 
-	return gulp.src('src/*.html')
-	.pipe(useref({
-		css:[minifycss(),autoprefixer('last 2 version')],
-		js:[uglify()]
+	return gulp.src('src/**/*.html')
+	.pipe(usemin({
+		css:[minifycss],
+		csslibs:[],
+		js:[uglify],
+		jslibs:[]
 		}))
 	.pipe(gulp.dest('dist'));
 	});
@@ -84,18 +101,3 @@ gulp.task('fonts', function() {
 	return gulp.src('src/fonts/**/*')
 	.pipe(gulp.dest('dist/fonts'))
 	})
-
-//Quality codes
-gulp.task('scss-lint', function() {
-	return gulp.src('/scss/*.scss')
-	.pipe(scsslint())
-	.pipe(gulp.dest('dist/css') );
-	});
-
-gulp.task('hint-js', function (event) {
-	return gulp.src('src/js/**/*.js')
-	.pipe(jshint())
-	.pipe(jshint.reporter(jshintStylish));
-	});
-
-
